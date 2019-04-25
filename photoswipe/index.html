@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=.5,user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <title>photoswipe</title>
+    <link rel="stylesheet" type="text/css" href="css/photoswipe.css">
+    <link rel="stylesheet" type="text/css" href="css/default-skin.css">
+    <style>
+        * {margin: 0;padding: 0;}
+        body {padding-top: 2%;}
+        .clearfix::before, .clearfix::after { display: block; content: ''; visibility: hidden; height: 100%; clear: both; }
+        .my-gallery {width:96%;margin: 0 auto;}
+        .my-gallery .img-dv {width:100%;margin-bottom: 1%;}
+        .my-gallery .img-dv a {display:block;width:100%;text-align: center}
+        .my-gallery .img-dv a img {width:100%;}
+        .pswp__counter{ height: 88px; font-size: 26px; line-height: 88px; color: #FFF; opacity: 0.75; padding: 0 20px; }
+        .pswp__button { width: 88px; height: 88px;background-size: 528px 176px;}
+        .pswp__button--close { background-position: 0 -88px; }
+        .pswp--zoom-allowed .pswp__button--zoom{display: none;}
+        .pswp__caption__center{font-size:32px;font-family:'Microsoft YaHei';line-height: 1.4;padding:0 20px;max-width: 100%;}
+    </style>
+</head>
+<body>
+    <div class="my-gallery" data-pswp-uid="1">
+        <!-- <figure>
+            <div class="img-dv"><a href="img/a.jpg" data-size="1920x1080"><img src="img/a.jpg"></a></div>
+            <figcaption style="display:none;">祖国江山大好</figcaption>
+        </figure>
+        <figure>
+            <div class="img-dv"><a href="img/b.jpg" data-size="1920x1080"><img src="img/b.jpg"></a></div>
+            <figcaption style="display:none;">一年四季，九天最美</figcaption>
+        </figure>
+        <figure>
+            <div class="img-dv"><a href="img/c.jpg" data-size="1920x1080"><img src="img/c.jpg"></a></div>
+            <figcaption style="display:none;">天气太热，空调太高，温度上升，要死要死！！！</figcaption>
+        </figure>
+        <figure>
+            <div class="img-dv"><a href="img/d.jpg" data-size="1920x1080"><img src="img/d.jpg"></a></div>
+            <figcaption style="display:none;">心静自然聊，滴滴滴</figcaption>
+        </figure>
+        <figure>
+            <div class="img-dv"><a href="img/d.jpg" data-size="1920x1080"><img src="img/d.jpg"></a></div>
+            <figcaption style="display:none;">心静自然聊，滴滴滴</figcaption>
+        </figure>
+        <figure>
+            <div class="img-dv"><a href="img/d.jpg" data-size="1920x1080"><img src="img/d.jpg"></a></div>
+            <figcaption style="display:none;">心静自然聊，滴滴滴</figcaption>
+        </figure>
+        <figure>
+            <div class="img-dv"><a href="img/e.jpg" data-size="1920x1080"><img src="img/e.jpg"></a></div>
+            <figcaption style="display:none;">最后一张了</figcaption>
+        </figure> -->
+    </div>
+</body>
+<script src="js/photoswipe.js"></script>
+<script src="js/photoswipe-ui-default.min.js"></script>
+<script type="text/javascript" src='js/active.js'></script>
+<script type="text/javascript">
+    window.onload = function() {
+
+
+        var imgObj = [{
+            img: 'a.jpg',
+            dic: '祖国江山大好',
+        }, {
+            img: 'b.jpg',
+            dic: '一年四季，九天最美',
+        }, {
+            img: 'c.jpg',
+            dic: '天气太热，空调太高，温度上升，要死要死！！！',
+        }, {
+            img: 'd.jpg',
+            dic: '心静自然聊，滴滴滴',
+        }, {
+            img: 'e.jpg',
+            dic: '祖国江山大好',
+        }, {
+            img: 'a.jpg',
+            dic: '一年四季，九天最美',
+        }, {
+            img: 'b.jpg',
+            dic: '天气太热，空调太高，温度上升，要死要死！！！',
+        }, {
+            img: 'c.jpg',
+            dic: '心静自然聊，滴滴滴',
+        }];
+        var list = document.querySelectorAll('.my-gallery');
+        var html = '';
+        for (var i = 0; i < imgObj.length; i++) {
+            html += `
+                    <figure>
+                        <div class="img-dv"><a href="img/${imgObj[i].img}" data-size="1920x1080"><img src="img/${imgObj[i].img}"></a></div>
+                        <figcaption style="display:none;">${imgObj[i].dic}</figcaption>
+                    </figure>`;
+        }
+        list[0].innerHTML = html;
+        pluginImg.active('.my-gallery');
+        
+    }
+    
+</script>
+</html>
