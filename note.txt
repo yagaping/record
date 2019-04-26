@@ -3,5 +3,5 @@
 在现有目录中初始化仓库
 $ git init
 
- 如果你想在克隆远程仓库的时候，自定义本地仓库的名字，你可以使用如下命令
+ 如果你想在克隆远程仓库的时候，自定义本地仓库的名字，你可以使用如下命令2
  $ git clone https://github.com/libgit2/libgit2 mylibgit
