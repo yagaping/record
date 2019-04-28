@@ -43,9 +43,9 @@ $ git rm -r --cached 文件名
 $ git commit -m '删除备注'
 $ git push -u origin master #提交删除
 
-删除本地文件6666
+删除本地文件
 $ git rm -f 文件名
 
-删除远程分支8888
+删除远程分支
 $ git push origin --delete 分支名 
 
