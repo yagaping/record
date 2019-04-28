@@ -3,8 +3,11 @@
 在现有目录中初始化仓库
 $ git init
 
- 如果你想在克隆远程仓库的时候，自定义本地仓库的名字，你可以使用如下命令
- $ git clone https://github.com/libgit2/libgit2 mylibgit
+如果你想在克隆远程仓库的时候，自定义本地仓库的名字，你可以使用如下命令
+$ git clone https://github.com/libgit2/libgit2 mylibgit
+
+将远程项目拉下来
+$ git pull origin master
 
 创建一个名为 .gitignore 的文件，列出要忽略的文件模式
 
@@ -31,3 +34,14 @@ $ git checkout 分支名 #进入分支
 
 查看主线分支
 $ git branch -a
+
+查看文件
+$ dir
+
+删除远程仓库文件
+$ git rm -r --cached 文件名
+$ git commit -m '删除备注'
+$ git push -u origin master #提交删除
+
+删除本地文件
+$ git rm -f 文件名
