@@ -26,5 +26,8 @@ $ git merge --abort #撤销当前合并
 $ git reset --hard HEAD #撤销工作目录中所有未提交文件的修改内容
 
 创建分支
-$ git branch 	#查看分支
-$ git checkout 分支名
+$ git branch 分支名	#创建新分支
+$ git checkout 分支名 #进入分支
+
+查看主线分支
+$ git branch -a
