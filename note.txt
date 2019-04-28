@@ -16,5 +16,6 @@ $ touch 文件名
 $ git branch 	#查看分支
 $ git checkout 分支名
 
-修改test分支
+合并分支
+
 
