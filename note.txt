@@ -8,14 +8,14 @@ $ git init
 
 创建一个名为 .gitignore 的文件，列出要忽略的文件模式
 
-创建文件
-$ touch 文件名
+创建文
+$ touh 文件名
 
+合并分支
+$ git merge '分支名'
+$ git merge --abort #撤销当前合并
+$ git reset --hard HEAD #撤销工作目录中所有未提交文件的修改内容
 
 创建分支
 $ git branch 	#查看分支
 $ git checkout 分支名
-
-合并分支
-
-
