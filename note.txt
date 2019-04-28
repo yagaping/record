@@ -11,6 +11,6 @@ $ git init
 创建文件
 $ touch 文件名
 
-
 合并分支
 $ git merge '分支名'
+$ git reset --hard HEAD #撤销工作目录中所有未提交文件的修改内容
