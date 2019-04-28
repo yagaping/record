@@ -12,4 +12,5 @@ $ git init
 $ touch 文件名
 
 
-修改test分支
+合并分支
+$ git merge '分支名'
