@@ -35,6 +35,12 @@ $ git checkout 分支名 #进入分支
 查看主线分支
 $ git branch -a
 
+查看哪些分支已经合并到当前分支
+$ git branch --merged
+
+查看所有包含未合并工作的分支
+$ git branch --no-merged
+
 查看文件
 $ dir
 
