@@ -58,4 +58,8 @@ $ git rm -f 文件名
 删除远程分支
 $ git push origin --delete 分支名 
 
+
 666666
+
+888888
+
