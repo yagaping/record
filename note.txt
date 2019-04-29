@@ -9,6 +9,9 @@ $ git clone https://github.com/libgit2/libgit2 mylibgit
 将远程项目拉下来
 $ git pull origin master
 
+拉取最新数据
+$ git fetch origin
+
 创建一个名为 .gitignore 的文件，列出要忽略的文件模式
 
 操作文件
