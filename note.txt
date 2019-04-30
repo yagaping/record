@@ -46,6 +46,10 @@ $ git branch --no-merged
 
 查看文件
 $ dir
+$ ls
+
+显示当前目录
+$ pwd
 
 删除远程仓库文件
 $ git rm -r --cached 文件名
@@ -57,3 +61,4 @@ $ git rm -f 文件名
 
 删除远程分支
 $ git push origin --delete 分支名 
+
