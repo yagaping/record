@@ -32,9 +32,11 @@ $ git diff 文件名
 查看日志
 $ git log #键入q退出
 $ git log --pretty=oneline #键入q退出
+$ git reflog
 
 回滚到某个版本
 $ git reset --hard HEAD~1 (1表示上一个版本，100表示上第100个版本)
+$ git reset --hard 2047087ddc221c541882f5be574d1c09d4c1e1bd (204...,commit_ID)
 
 合并分支
 $ git merge '分支名'
