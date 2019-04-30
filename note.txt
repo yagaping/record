@@ -26,6 +26,14 @@ $ vim 文件名	#进入文件
 查看文件
 $ cat 文件名
 
+查看文件修改对比
+$ git diff 文件名
+
+产看日志
+$ git log #键入q退出
+$ git log --pretty=oneline #键入q退出
+
+
 合并分支
 $ git merge '分支名'
 $ git merge --abort #撤销当前合并
