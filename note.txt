@@ -29,10 +29,12 @@ $ cat 文件名
 查看文件修改对比
 $ git diff 文件名
 
-产看日志
+查看日志
 $ git log #键入q退出
 $ git log --pretty=oneline #键入q退出
 
+回滚到某个版本
+$ git reset --hard HEAD~1 (1表示上一个版本，100表示上第100个版本)
 
 合并分支
 $ git merge '分支名'
