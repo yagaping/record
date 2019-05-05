@@ -85,4 +85,3 @@ $ git stash apply #恢复内容，不删除stash
 $ git stash drop #删除保存记录stash
 $ git stash pop #恢复并删除stash
 
-123
