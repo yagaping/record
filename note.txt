@@ -9,6 +9,10 @@ $ git clone https://github.com/libgit2/libgit2 mylibgit
 将远程项目拉下来
 $ git pull origin master
 
+提交
+$ git push -u origin master(第一次推送加-u,关联远程分支master)
+$ git push origin master
+
 拉取最新数据
 $ git fetch origin
 
