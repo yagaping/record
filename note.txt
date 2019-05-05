@@ -78,3 +78,9 @@ $ git rm -f 文件名
 删除远程分支
 $ git push origin --delete 分支名 
 
+把当前改的存储起来
+$ git stash
+$ git stash list #查看保存的记录
+$ git stash apply #恢复内容，不删除stash
+$ git stash drop #删除保存记录stash
+$ git stash pop #恢复并删除stash
