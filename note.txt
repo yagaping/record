@@ -5,6 +5,7 @@ $ git init
 
 如果你想在克隆远程仓库的时候，自定义本地仓库的名字，你可以使用如下命令
 $ git clone https://github.com/libgit2/libgit2 mylibgit
+$ git remote add origin https://github.com/yagaping/someProject.github #关联远程仓库
 
 将远程项目拉下来
 $ git pull origin master
