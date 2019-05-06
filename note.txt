@@ -48,17 +48,22 @@ $ git merge '分支名'
 $ git merge --abort #撤销当前合并
 $ git reset --hard HEAD #撤销工作目录中所有未提交文件的修改内容
 
-创建分支
+操作分支
 $ git branch 分支名	#创建新分支
 $ git checkout 分支名 #进入分支
 
 查看主线分支
 $ git branch -a
 
-打标签
-$ git tag v1.0
+操作标签
+$ git tag v1.0 #创建标签
 $ git tag #查看标签
-$ git tag v1.1 commtId #针对某个历史打标签
+$ git tag v1.1 commitId #针对某个历史打标签
+$ git tag -a v0.1 -m '备注' commitId #创建带备注的标签
+$ git tag -d v1.0 #删除标签
+$ git push origin v1.0 #推送本地标签到远程
+$ git push origin --tags #推送所有标签到远程
+$ git push origin :refs/tags/v1.1 #删除远程标签
 
 查看哪些分支已经合并到当前分支
 $ git branch --merged
