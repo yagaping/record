@@ -1,5 +1,9 @@
 学习、笔记
 
+创库地址
+github:https://github.com/yagaping/someProject.git
+码云：https://gitee.com/yagagping/someProject.git
+
 在现有目录中初始化仓库
 $ git init
 
