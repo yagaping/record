@@ -101,3 +101,7 @@ $ git stash list #查看保存的记录
 $ git stash apply #恢复内容，不删除stash
 $ git stash drop #删除保存记录stash
 $ git stash pop #恢复并删除stash
+
+配置git快捷命令
+$ git config --global alias.ab abc #ab简写，abc命令，不加--global只对当前仓库生效
+
