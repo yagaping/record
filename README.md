@@ -49,9 +49,20 @@ iView ( https://www.iviewui.com/ )
  
  ### 添加图片
 ```
-1、![山水](https://github.com/yagaping/someProject/blob/master/photoswipe/img/a.jpg)
+# 添加图片
+1、![name](https://github.com/yagaping/someProject/blob/master/photoswipe/img/a.jpg "alt") 
+
 2、<img width="100" src="url" alt="">
- ```
+
+# 添加图片链接
+[![baidu]](http://baidu.com)  
+[baidu]:http://www.baidu.com/img/bdlogo.gif "百度Logo"  
+
+```
+
+[![baidu]](http://baidu.com)  
+[baidu]:http://www.baidu.com/img/bdlogo.gif "百度Logo"  
+
  <p align="center"><img width=300 src="https://github.com/yagaping/someProject/blob/master/photoswipe/img/a.jpg" alt="山水"></p>
  
 
