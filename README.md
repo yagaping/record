@@ -47,6 +47,6 @@ iView ( https://www.iviewui.com/ )
  | YDUI Touch（jq移动UI） | [前往](http://www.ydui.org/) 
  | 廖雪峰官网 | [前往](https://www.liaoxuefeng.com/)
 
- <img src="https://github.com/yagaping/someProject/row/photoswipe/img/a.jgp">
+ <img src="https://github.com/yagaping/someProject/blob/master/photoswipe/img/a.jpg">
 
 
