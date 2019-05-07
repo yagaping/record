@@ -46,24 +46,11 @@ iView ( https://www.iviewui.com/ )
  | 缓动函数速查表 | [前往](https://easings.net/)
  | YDUI Touch（jq移动UI） | [前往](http://www.ydui.org/) 
  | 廖雪峰官网 | [前往](https://www.liaoxuefeng.com/)
- 
- ### 添加图片
-```
-# 添加图片
-1、![name](https://github.com/yagaping/someProject/blob/master/photoswipe/img/a.jpg "alt") 
-
-2、<img width="100" src="url" alt="">
-
-# 添加图片链接
-[![baidu]](http://baidu.com)  
-[baidu]:http://www.baidu.com/img/bdlogo.gif "百度Logo"  
-
-```
-
-[![level]](http://baidu.com)
-[level] : http://www.baidu.com/img/bdlogo.gif "百度Logo"  
+  
 
  <p align="center"><img width=300 src="https://github.com/yagaping/someProject/blob/master/img/ping.jpg" alt="山水"></p>
+
+ # 我爱杨佩琳
  
 
 
