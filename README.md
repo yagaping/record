@@ -50,7 +50,3 @@ iView ( https://www.iviewui.com/ )
 ***
  <p align="center"><img width=300 src="https://github.com/yagaping/someProject/blob/master/img/ping.jpg" alt="山水"></p>
 
- <p align="center">我爱杨佩琳</p>
- 
-
-
