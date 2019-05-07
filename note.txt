@@ -1,5 +1,8 @@
 学习、笔记
 
+如何在github添加仓库
+https://www.cnblogs.com/cxk1995/p/5800196.html
+
 创库地址
 github:https://github.com/yagaping/someProject.git
 码云：https://gitee.com/yagagping/someProject.git
