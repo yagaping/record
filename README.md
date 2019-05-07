@@ -61,7 +61,7 @@ iView ( https://www.iviewui.com/ )
 ```
 
 [![level]](http://baidu.com)
-[level]:http://www.baidu.com/img/bdlogo.gif "百度Logo"  
+[level] : http://www.baidu.com/img/bdlogo.gif "百度Logo"  
 
  <p align="center"><img width=300 src="https://github.com/yagaping/someProject/blob/master/photoswipe/img/a.jpg" alt="山水"></p>
  
