@@ -47,8 +47,10 @@ iView ( https://www.iviewui.com/ )
  | YDUI Touch（jq移动UI） | [前往](http://www.ydui.org/) 
  | 廖雪峰官网 | [前往](https://www.liaoxuefeng.com/)
  
+ ### 添加图片
 ```
-![山水](https://github.com/yagaping/someProject/blob/master/photoswipe/img/a.jpg)
+1、![山水](https://github.com/yagaping/someProject/blob/master/photoswipe/img/a.jpg)
+2、<img width="100" src="url" alt="">
  ```
  <p align="center"><img width=300 src="https://github.com/yagaping/someProject/blob/master/photoswipe/img/a.jpg" alt="山水"></p>
  
