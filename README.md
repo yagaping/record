@@ -2,13 +2,13 @@
 
 #### 前端框架
 ```abc
-![react](https://react.docschina.org/ 'react')
+http://react.docschina.org/
 
-![react](https://react.docschina.org/ 'react')
+[第三方](http://react.docschina.org/ 'react')
 ```
-色调分离
+# 色调分离
 
-[百度](htttp://www.baidu.com "百度")
+[百度](http://www.baidu.com "百度")
 
 [hao123](http://www.hao123.com 'hao123')
 
@@ -47,15 +47,3 @@ npm test
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-# 郭平
-
-## 九天
-
-lalala
-啦啦啦
-
-### 平生不淡
-
-## 平生不淡
-
-# 平生不淡
