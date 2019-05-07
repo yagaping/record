@@ -60,8 +60,7 @@ iView ( https://www.iviewui.com/ )
 
 ```
 
-[![baidu]](http://baidu.com)  
-[baidu]:http://www.baidu.com/img/bdlogo.gif "百度Logo"  
+[![baidu]](http://baidu.com)[baidu]:http://www.baidu.com/img/bdlogo.gif "百度Logo"  
 
  <p align="center"><img width=300 src="https://github.com/yagaping/someProject/blob/master/photoswipe/img/a.jpg" alt="山水"></p>
  
