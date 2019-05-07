@@ -4,11 +4,11 @@
 react
 ====
 ```
-antd
+* antd
 react + dva + ES6 + antd + roadhog
 ```
 ```
-React全家桶
+* React全家桶
 react + redux + react-router + less/sass + ES6 + webpack  
 ```
 angular
