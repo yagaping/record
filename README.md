@@ -44,7 +44,7 @@ iView ( https://www.iviewui.com/ )
  | 技术大杂2 | [前往](http://www.daqianduan.com/nav)
  | 免费管理图片（图床） | [前往](https://imgchr.com/)
  | 缓动函数速查表 | [前往](https://easings.net/)
- | YDUI Touch(jq移动UI) | [前往](http://www.ydui.org/) 
+ | YDUI Touch（jq移动UI） | [前往](http://www.ydui.org/) 
  | 廖雪峰官网 | [前往](https://www.liaoxuefeng.com/)
 
 
