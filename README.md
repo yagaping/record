@@ -1,7 +1,7 @@
 # <p align='center'>前端资料汇总</p>
 
 ### 前端框架
-#### react
+#### * react
 ```
 antd
 react + dva + ES6 + antd + roadhog
@@ -10,7 +10,7 @@ react + dva + ES6 + antd + roadhog
 React全家桶
 react + redux + react-router + less/sass + ES6 + webpack  
 ```
-#### angular
+#### * angular
 
 ```
 3333
