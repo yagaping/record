@@ -52,3 +52,4 @@ iView ( https://www.iviewui.com/ )
 ***
  <p align="center"><img width=300 src="https://github.com/yagaping/someProject/blob/master/img/ping.jpg" alt="山水"></p>
 
+<p align="right">不积跬步无以至千里；不积小流无以成江海。</p>
