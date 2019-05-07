@@ -24,7 +24,7 @@ iView ( https://www.iviewui.com/ )
  ### 书签链接
 
  | 描述 | 链接
- | ---  | --- 
+ | :---:  | --- 
  | BOM和DOM详解 | [前往](https://www.jb51.net/article/55851.htm)
  | w3cschool | [前往](http://www.w3school.com.cn/)
  | Node.js 中文api | [前往](http://nodejs.cn/api/modules.html)
