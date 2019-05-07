@@ -10,7 +10,7 @@
 
 https://www.cnblogs.com/cxk1995/p/5800196.html
 
-*胜多负少发
+* 胜多负少发
 
 # mcllq
 
