@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mp3</title>
+	<link rel="shortuct icon" type="images/x-icon" href="images/icon.png">
+	<link rel="stylesheet" href="style/style.css">
+	<script>
+		// window.onbeforeunload=function (){ 
+		// 	alert("===onbeforeunload==="); 
+		// 	if(event.clientX>document.body.clientWidth && event.clientY < 0 || event.altKey){ 
+		// 		alert("你关闭了浏览器"); 
+		// 	}else{ 
+		// 		alert("你正在刷新页面"); 
+		// 	} 
+		// } 
+	</script>
+</head>
+<body>
+	<div class="mp3" id="mp3">
+		<div class="title">
+			<div class="head">
+				<div class="img"></div>
+				<div class="wd">
+					<h3>B.E.L.I.E.V.E</h3>
+					<p>QQ等级加速中<span class="icon-rocket"></span></p>
+				</div>
+			</div>
+			<div class="search">
+				<div class="refresh" id="refresh"><span class="icon-spinner11"></span></div>
+				<div class="search_text">
+					<input type="text" placeholder="周杰">
+					<span class="icon-search"></span>
+				</div>
+			</div>
+			<div class="mp3_btn">
+				<span class="icon-woman" id="skin"></span>
+				<span class="icon-menu"></span>
+				<span class="span_min"></span>
+				<span class="span_max"></span>
+				<span class="span_close"></span>
+			</div>
+		</div>
+		<div class="music">
+			<div class="music_left"></div>
+			<div class="music_right">
+				<div class="lyrics">
+					<p><img src="images/flute.jpg" alt=""></p>
+					<p><img src="images/flute_2.jpg" alt=""></p>
+				</div>
+			</div>
+		</div>
+		<div class="foot">
+			<div class="player">
+				<div class="palyer_btn">
+					<div class="pervious">
+						<span class="icon-previous"></span>
+					</div>
+					<div class="play_pause">
+						<span class="icon-play2"></span>
+					</div>
+					<div class="next">
+						<span class="icon-next"></span>
+					</div>
+				</div>
+			</div>
+			<div class="info">
+				<div class="song_name">
+					<div class="gqimg">
+						
+					</div>
+					<div class="status">
+						<div class="show_name">
+							<div class="name"><span>歌曲名</span><em style="display:none"></em></div>
+							<div class="time">
+								<span class="time_over">00:00</span>/<span class="time_all">00:00</span>
+							</div>
+						</div>
+						<div class="linear">
+							<div class="bar">
+								<div class="bar_2">
+								</div>
+								<span class="point"></span>
+							</div>
+						</div>
+					</div>
+					<div class="type">
+						<div class="scene">
+							标准∧
+						</div>
+						<div class="scene">
+							音效∧
+						</div>
+					</div>
+					<div class="other">
+						<div class="collect">
+							<span class="icon-heart"></span>
+						</div>
+						<div class="down">
+							<span class="icon-download"></span>
+						</div>
+						<div class="vol">
+							<span class="icon-volume-low"></span>
+						</div>
+						<div class="word">
+							<span>词</span>
+						</div>
+						<div class="del">
+							<span class="icon-bin"></span>
+						</div>
+						<div class="list">
+							<span class="icon-menu"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 音量调节 -->
+		<div class="volume">
+			<div class="volume_adjust">
+				<div class="volume_rod">
+					<div class="volume_rod_how">
+						
+					</div>
+					<div class="volume_point"></div>
+				</div>
+			</div>
+			<div class="volume_ico">
+				<span class="icon-volume-low volume_end_start"  role="button" tabindex="0"></span>
+			</div>
+			<div class="volume_arr"></div>
+		</div>
+	</div>
+	<div class="mp3small">
+		未播放
+	</div>
+	<!--播放音频的flash隐藏窗口-->
+	<div class="jplay" id="jp_sound"></div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/jquery.jplayer.js"></script>
+<script src="js/music.js"></script>
+</html>

@@ -1,0 +1,15 @@
+{ "song":[
+	{"name":"music1","title":"逆风","type":"专辑"},
+	{"name":"music2","title":"雪月","type":"个人"},
+	{"name":"music3","title":"Abba Teens - Firefly","type":""},
+	{"name":"music4","title":"鹿晗 - 我们的明天 (《重返20岁》电影主题曲)","type":"专辑"},
+	{"name":"music5","title":"Katy Perry - Dark Horse","type":"个人"},
+	{"name":"music6","title":"Kamelia - Prima oara","type":"个人"},
+	{"name":"music7","title":"Jewel - Stand (up 1.0% Version)","type":"个人"},
+	{"name":"music8","title":"Dana Winner - Moonlight Shadow","type":"个人"},
+	{"name":"music9","title":"Avril Lavigne - Here's To Never Growing Up (Instrumental)","type":"专辑"}
+	],
+	"other":[
+		{"comment":12}
+	]
+}
