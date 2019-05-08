@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style>
+	#warp{overflow: hidden;margin-top: 30px;width: 800px;}
+	.hero{text-align: right;padding:0px 96px 20px 0;}
+	.select{height: 30px;line-height: 30px;padding:0 10px;}
+	.list{overflow: hidden;position: relative;}
+	.list ul{clear: both;float: left;padding:0;margin: 0;}
+	.list ul li{width: 20px;padding:10px 20px;text-align: center;list-style: none;position: relative;background: #fff;z-index: 10;border:1px solid #fff;}
+	.list ul li p{display: none;}
+	.list ul li em{display: block;width: 1px;height: 100%;position: absolute;top:0;right:-2px;}
+	.list ul li.active{color:blue;border:1px solid #ccc;border-right:1px solid #fff;}
+	.list ul li.active em{background: #fff;}
+	#head {
+			width: 100px;height: 100px;margin: 0 auto;
+		}
+	.dic{line-height: 30px;padding:30px 20px;text-indent: 2em;letter-spacing: 2px;float: left;border:1px solid #ccc;width: 600px;height: 100%;z-index: 0;position: relative;z-index:1;color:#110f21;height: 430px;min-height: 430px;}
+	.dic b{color:#b528bd;}
+	.dic img{display: block;position:absolute;left:50%;top:35%;}
+	.sword{width: 600px;height: 178px;position: absolute;bottom: 0;left:82px;z-index:0;}
+	.sword .type{background-image: url(img/sword.png);background-repeat: no-repeat;width: 55px;height: 178px;position: absolute;bottom: 0;
+	}
+	.sword .type1{background-position:0 -217px;left:0;}
+	.sword .type2{background-position:-55px -217px;width:45px;left:50%;margin-left:-27px;}
+	.sword .type3{background-position:-143px -217px;width:50px;right:0;}
+	.author{overflow: hidden;padding:20px 0 0 62px;}
+	.author em{font-style: normal;}
+	.author p:first-of-type em{
+		color:orange;
+	}
+	.author p:last-of-type em{
+		color:green;
+	}
+	.author p b{color:red;font-weight: normal;}
+	</style>
+</head>
+<body>
+	<div id="warp">
+		<div id="head">
+			<img src="img/pvp/190.jpg" title="诸葛亮" width="100" height="100">
+		</div>
+		<div class="hero">
+			<select class="select" id="type"></select> <select class="select" id="select"></select>
+		</div>
+		<div class="list" id="list">
+			<ul>
+				<li><span style="color:green;">诸葛亮<br>..</span></li>
+			</ul>
+			<div class="dic"></div>
+			<div class="sword">
+				<div class="type type1"></div>
+				<div class="type type2"></div>
+				<div class="type type3"></div>
+			</div>
+		</div>
+		<div class="author" id="author">
+			<p>时间：<em></em>　作者：<b>彦晨熙</b></p>
+		</div>
+	</div>
+</body>
+<script>
+	// 定义常量
+	var GAME_PVP = "",
+		GAME_LOL = "",
+		ABOUT_WHO = "";
+
+	// 获取节点
+	var gameType = document.getElementById("type");
+	var select = document.getElementById("select");
+	var list = document.getElementById("list");
+	var head = document.getElementById("head");
+	var author = document.getElementById("author");
+	var img = head.getElementsByTagName("img")[0];
+	var oUl = list.getElementsByTagName("ul")[0];
+	var oUlHtml = oUl.innerHTML;
+	var oLi = oUl.getElementsByTagName("li");
+	var text = list.getElementsByTagName("div")[0];
+
+	//定义数据变量
+	var data = null;
+	var dataLol = null;
+	var dataPer = null;
+	var gameLen = 0;
+
+	window.onload = function() {
+
+		// 创建XMLHttpRequest
+		var xmlhttp;
+		if (window.XMLHttpRequest) {
+			xmlhttp = new XMLHttpRequest();
+		} else {
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		// 规定请求类型、URL以及是否异步处理请求
+		xmlhttp.open("GET", "role.json",true);
+
+		// 将请求发送到服务器
+		xmlhttp.send();
+		
+		// 发生响应时，执行方法
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.status == 200 && xmlhttp.readyState == 4) {
+				var roleJson = JSON.parse(xmlhttp.responseText);
+
+				//读取数据
+				data = roleJson.role.information;
+				dataLol = roleJson.lol.information;
+				dataPer = roleJson.personal.information;
+
+				// 第一个选择框中的内容
+				GAME_PVP = roleJson.role.type;
+				GAME_LOL = roleJson.lol.type;
+				ABOUT_WHO = roleJson.personal.type;
+
+				//加载第一选项内容
+				var gameName = new Array(GAME_PVP, GAME_LOL, ABOUT_WHO);
+				var gameNameHtml = '';
+				for (var gn in gameName) {
+					gameNameHtml += '<option>' + gameName[gn] + '</option>';
+				}
+				gameType.innerHTML = gameNameHtml;
+
+				// 页面初始化数据
+				loadData();
+
+				// 第一选项内容改变
+				gameType.onchange = function() {
+					var gameName = this.value;
+					loadData();
+				}
+
+				// 选择第二项中的内容
+				select.onchange = function() {
+					var _self = this;
+					if (gameType.value == GAME_PVP) {
+						var newData = data;
+					} else if (gameType.value == GAME_LOL) {
+						var newData = dataLol;
+					} else if (gameType.value == ABOUT_WHO) {
+						var newData = dataPer;
+					}
+
+					// 初始化第一次加载
+					text.innerHTML = '<img src="img/load1.gif" />';
+					setTimeout(function() {
+						loadContent({
+							"this": select,
+							"img": img,
+							"data": newData,
+							"oLi": oLi,
+							"len": gameLen,
+							"text": text,
+							"skname": gameSkillName
+						});
+					}, 200)
+				}
+			}
+		}
+
+		// 显示作者，时间
+		authorText(author);
+	}
+
+	//角色技能切换
+	function lookRole(oLi, gameLen, text) {
+		for (var i = 0; i < gameLen; i++) {
+			if (i > 0) {
+				oLi[i].className = "";
+				oLi[1].className = "active";
+				oLi[i].style.cursor = "pointer";
+				var dic = oLi[1].getElementsByTagName("p")[0].innerHTML;
+				text.innerHTML = dic;
+				oLi[i].onmouseover = function() {
+					dic = this.getElementsByTagName("p")[0].innerHTML;
+					text.innerHTML = dic;
+					for (var j = 0; j < gameLen; j++) {
+						oLi[j].className = "";
+					}
+					this.className = "active";
+				}
+			}
+		}
+	}
+	// 初始化
+	var gameSkillPvp = [{
+		"name": "被动",
+		"skill": "passive"
+	}, {
+		"name": "技能1",
+		"skill": "skills1"
+	}, {
+		"name": "技能2",
+		"skill": "skills2"
+	}, {
+		"name": "技能3",
+		"skill": "skills3"
+	}];
+	var gameSkillLol = [{
+		"name": "被动",
+		"skill": "passive"
+	}, {
+		"name": "按键Q",
+		"skill": "skillQ"
+	}, {
+		"name": "按键W",
+		"skill": "skillW"
+	}, {
+		"name": "按键E",
+		"skill": "skillE"
+	}, {
+		"name": "按键R",
+		"skill": "skillR"
+	}];
+	var gameSkillPer = [{
+		"name": "性格",
+		"skill": "mold"
+	}, {
+		"name": "生活",
+		"skill": "life"
+	}, {
+		"name": "工作",
+		"skill": "work"
+	}, {
+		"name": "认知",
+		"skill": "self"
+	}, {
+		"name": "其他",
+		"skill": "other"
+	}]
+	var gameSkillName = "",
+		newData = null;
+
+	function loadData(elem) {
+		if (gameType.value == GAME_PVP) {
+			newData = data;
+			gameSkillName = gameSkillPvp;
+
+		} else if (gameType.value == GAME_LOL) {
+			newData = dataLol;
+			gameSkillName = gameSkillLol;
+		} else if (gameType.value == ABOUT_WHO) {
+			newData = dataPer;
+			gameSkillName = gameSkillPer;
+		}
+		var oLiHtml = '';
+		for (var sn in gameSkillName) {
+			oLiHtml += '<li><span>' + gameSkillName[parseInt(sn)].name + '</span><p><b></b></p><em></em></li>';
+		}
+		oUl.innerHTML = oUlHtml + oLiHtml;
+		var html = '';
+		for (var p in newData) {
+			if (newData[p]["name"]) {
+				html += '<option>' + newData[p]["name"] + '</option>';
+			}
+		}
+		select.innerHTML = html;
+		//显示内容的容器高度
+		gameLen = oLi.length;
+		text.style.height = oUl.clientHeight + "px";
+		// 初始化第一次加载
+		text.innerHTML = '<img src="img/load1.gif" />';
+		setTimeout(function() {
+			loadContent({
+				"this": select,
+				"img": img,
+				"data": newData,
+				"oLi": oLi,
+				"len": gameLen,
+				"text": text,
+				"skname": gameSkillName
+			});
+		}, 200)
+	}
+	
+	//角色技能介绍
+	function readDic(elem, data1, type) {
+		var oP = elem.getElementsByTagName("p")[0];
+		var oB = oP.getElementsByTagName("b")[0];
+		oB.innerHTML = data1.skill[type]["name"];
+		oP.innerHTML = '<b>' + oB.innerHTML + '</b>' + data1.skill[type].dic;
+	}
+
+	//加载各角色信息
+	function loadContent(obj) {
+		var roleVal = obj.this.value;
+		if (roleVal == "" || roleVal == undefined || roleVal == "undefined" || roleVal == null) {
+			return;
+		}
+		var roleDic = null;
+		for (var p2 in obj.data) {
+			if (roleVal == obj.data[p2]["name"]) {
+				roleDic = obj.data[p2];
+			}
+		}
+		console.log(roleDic);
+		obj.img.src = "img/" + roleDic.skill.src;
+		obj.img.title = roleDic.name;
+		obj.oLi[0].getElementsByTagName("span")[0].innerHTML = roleVal + '<br>..';
+		for (var i = 1; i < obj.len; i++) {
+			readDic(obj.oLi[i], roleDic, obj["skname"][i - 1]["skill"]);
+		}
+
+		lookRole(obj.oLi, obj.len, obj.text);
+	}
+	// 开发者信息
+	function authorText(elem) {
+		var newTime = elem.getElementsByTagName("p")[0].getElementsByTagName("em")[0];
+		newTime.innerHTML = getTime();
+		setInterval(function() {
+			newTime.innerHTML = getTime();
+		}, 500);
+	}
+
+	function getTime() {
+		var time = new Date();
+		var year = time.getFullYear();
+		var month = add0(time.getMonth() + 1);
+		var day = time.getDate();
+		var hours = add0(time.getHours());
+		var minutes = add0(time.getMinutes());
+		var seconds = add0(time.getSeconds());
+		var week = time.getDay();
+		var array = new Array("周日", "周一", "周二", "周三", "周四", "周五", "周六");
+		week = array[week];
+
+		return year + "年" + month + "月" + day + "日" + " " + hours + "时" + minutes + "分" + seconds + "秒" + "　" + week;
+	}
+
+	function add0(num) {
+		if (num < 10) {
+			num = "0" + num;
+		}
+		return num;
+	}
+</script>
+</html>
