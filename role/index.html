@@ -250,7 +250,7 @@
 		for (var sn in gameSkillName) {
 			oLiHtml += '<li><span>' + gameSkillName[parseInt(sn)].name + '</span><p><b></b></p><em></em></li>';
 		}
-		oUl.innerHTML = oUlHtml + oLiHtml;
+		oUl.innerHTML = oUlHtml + oLiHtml;    
 		var html = '';
 		for (var p in newData) {
 			if (newData[p]["name"]) {
@@ -296,7 +296,6 @@
 				roleDic = obj.data[p2];
 			}
 		}
-		console.log(roleDic);
 		obj.img.src = "img/" + roleDic.skill.src;
 		obj.img.title = roleDic.name;
 		obj.oLi[0].getElementsByTagName("span")[0].innerHTML = roleVal + '<br>..';
