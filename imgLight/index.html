@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>闪光图片</title>
+<style>
+	*{margin:0;padding:0;}
+	.overimg{
+	position: relative;
+	display: block;
+	/* overflow: hidden; */
+	box-shadow: 0 0 10px #FFF;
+	}
+	.light{
+	cursor:pointer;
+	position: absolute;
+	left: -180px;
+	top: 0;
+	width: 180px;
+	height: 90px;
+	background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+	background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+	transform: skewx(-25deg);
+	-o-transform: skewx(-25deg);
+	-moz-transform: skewx(-25deg);
+	-webkit-transform: skewx(-25deg);
+	}
+	.overimg:hover .light{
+	left:180px;
+	-moz-transition:0.5s;
+	-o-transition:0.5s;
+	-webkit-transition:0.5s;
+	transition:0.5s;
+	}
+	ul{
+		list-style: none;
+		overflow: hidden;
+		padding:0 10px;
+	}
+	ul li{
+		width:50%;
+		float: left;
+		position: relative;
+		overflow: hidden;
+	}
+	ul li .overimg{
+		width: 100%;
+		height: 300px;
+		overflow: hidden;
+	}
+	ul li .overimg img{
+		width:100%;
+		height: auto;
+		display: block;
+	}
+
+</style>
+</head>
+<body>
+	<p class="overimg">
+		<a><img src="http://www.nowamagic.net/librarys/images/201402/2014_02_15_01.jpg"></a>
+		<i class="light"></i>
+	</p>
+	<ul>
+		<li>
+			<div class="overimg">
+			</div>
+			<i class="light"></i>
+		</li>
+		<li>
+			<div class="overimg">
+			</div>
+			<i class="light"></i>
+		</li>
+		<li>
+			<div class="overimg">
+			</div>
+			<i class="light"></i>
+		</li>
+		<li>
+			<div class="overimg">
+			</div>
+			<i class="light"></i>
+		</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	var oUl = document.getElementsByTagName('ul')[0];
+	var oLi = oUl.getElementsByTagName('li');
+	var imgW = oLi[0].clientWidth;
+	var imgH = oLi[0].clientHeight;
+	var lights = document.querySelectorAll('ul li .light');
+	for(var i=0;i<lights.length;i++){
+		lights[i].style.height = imgH+'px';
+		lights[i].style.width = imgW+'px';
+		lights[i].style.left = -imgW+'px';
+	}
+	for(var i=0;i<oLi.length;i++){
+		(function(idx){
+			oLi[idx].querySelector('.overimg').style.backgroundImage = `url(img/i${idx+1}.jpg)`;
+			oLi[idx].onmouseover = function(){
+				oLi[idx].querySelector('.light').style.left = imgW + 'px';
+				oLi[idx].querySelector('.light').style.transition = '0.5s';
+			}
+			oLi[idx].onmouseout = function(){
+				oLi[idx].querySelector('.light').style.left = -imgW + 'px';
+			}
+		})(i)
+	}
+</script>
+</html> 
