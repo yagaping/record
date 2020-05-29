@@ -1,0 +1,91 @@
+
+// 容器
+.container {
+  height: 900px;
+}
+
+.wrap{
+  min-width:1530px;
+  overflow:auto;
+}
+.wrap:after{
+  content: '';
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  display: block;
+}
+// 文本编辑器
+.contentEditor {
+  height: 840px;
+  width: 800px;
+  position: relative;
+  background-color: #FFF;
+  margin-top:100px;
+  // box-shadow: 0px 1px 5px 2px #a2a2a2;
+}
+.save{
+  position:absolute;
+  overflow: hidden;
+  left:1235px;
+  top:0;
+  button{
+    width:240px;
+    float:left;
+    margin-bottom:30px; 
+  }
+  .radios{
+    margin-bottom:30px;
+    width:330px;
+  }
+  
+}
+
+// 视频，多图，问答暂不可编辑
+.default{
+  height: 840px;
+  width: 800px;
+  margin-top:100px;
+  background: rgba(0,0,0,.1);
+}
+
+// 模拟器
+.phoneSimulator {
+  display: inline-block;
+  position: absolute;
+  top:0;
+  left: 830px;
+}
+
+.editTitle{
+  height: 80px;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top:0;
+  .title{
+    width: 650px;
+    float: left;
+    textarea{
+      resize:none;
+    }
+  }
+  .show{
+    float: left;
+    margin:24px 0 0 20px;
+  }
+}
+.textArea{
+  border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    transition: all .3s, height 0s;
+    min-height: 32px;
+    padding: 4px 11px;
+    font-size: 14px;
+    line-height: 1.5;
+    height: 73px;
+  
+}
+.textArea:hover{
+  border-color: #40a9ff;
+}

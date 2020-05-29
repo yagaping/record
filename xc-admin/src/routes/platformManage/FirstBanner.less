@@ -1,0 +1,53 @@
+.form{
+  overflow: hidden;
+  dd{
+    float: left;
+    width: 200px;
+  }
+}
+.left{
+  float:left;
+}
+.right{
+  float:right;
+}
+.table{
+  position: relative;
+  .delete{
+    position: absolute;
+    left:0;
+    bottom:0;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: all .3s;
+  }
+  .hide{
+    position: absolute;
+    left:0;
+    bottom:0;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: all .3s;
+  }
+}
+.imgClean{
+  overflow: hidden;
+  clear: both;
+}
+.imgArr{
+  width: 100px;
+  height: 100px;
+  padding:5px;
+  float: left;
+  overflow: hidden;
+  img{
+    display: block;
+  }
+}
+.imgArr:after{
+  content:'.';
+  overflow:hidden;
+  clear: both;
+  display: block;
+  height: 0;
+}

@@ -1,0 +1,104 @@
+// 模拟器
+.phoneSimulator {
+  display: inline-block;
+  position: absolute;
+  top:0;
+  left: 830px;
+}
+.info{
+  overflow: hidden;
+  width: 800px;
+  min-height: 800px;
+  padding-top:15px;
+  .dic{
+    float: left;
+    width: 66px;
+    text-align: center;
+    line-height: 32px;
+  }
+  .astract{
+    margin-left: 66px;
+  }
+  .dicWord{
+    position: absolute;
+    top:204px;
+    left:280px;
+    width: 520px;
+    background: #fff;
+  }
+  .imageInfo{
+    margin-top:30px;
+    height: 468px;
+    width:266px;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+    .showImg{
+      width: 224px;
+    }
+    
+    :global{
+      .ant-upload-select-picture-card .ant-upload-text {
+        margin-top: 8px;
+        color: #666;
+      }
+        .ant-upload-list-picture-card .ant-upload-list-item{
+        width: 242px!important;
+        height: 224px!important;
+        }
+        .ant-upload-list-picture-card .ant-upload-list-item-uploading-text{
+          text-align: center;
+          margin-top: 78px;
+        }
+    }
+  }
+  .addImage{
+    overflow: hidden;
+    padding-bottom: 15px;
+    width:224px;
+    .image{
+      padding:10px 0;
+      height: 208px;
+      i{
+        margin-top: 50px;
+        color:#ccc;
+        font-size:50px;
+      }
+      p{
+        width: 80%;
+        margin:0 auto;
+        text-align: left;
+      }
+    }
+   
+  }
+  .footer{
+    overflow: hidden;
+    padding-top:30px;
+    width: 800px;
+    .upload{
+      height: 100px;
+      padding: 15px 0;
+      box-sizing:content-box;
+      .box{
+        overflow: hidden;
+      }
+      a{
+        display: inline-block;
+        margin-right:15px;
+        width:100px;
+        height: 100px;
+        border:1px solid #ccc;
+      }
+    }
+    .btns{
+      width:80px;
+      margin-left:10px;
+    }
+  }
+}
+.ant-upload-select-picture-card i {
+  font-size: 32px;
+  color: #999;
+}
+

@@ -1,0 +1,61 @@
+@import "~antd/lib/style/themes/default.less";
+.table{
+  overflow: hidden;
+  width: 100%;
+  tr{
+    th{
+      text-align: center;
+    }
+    td{
+      border-left:1px solid #e8e8e8;
+      text-align: center;
+    }
+    td:first-child{
+      border-left:none;
+    }
+  }
+  
+}
+.searchLayout{
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  dd{
+    float:left;
+    width: 180px;
+    padding-right:20px;
+    vertical-align: middle;
+    margin:0;
+    min-height: 64px;
+    .submitButtons{
+      vertical-align: -9px;
+    }
+  }
+  dd:after{
+    content: '';
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+  }
+ 
+  
+}
+.searchLayout:after{
+  content: '';
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+}
+@media screen and (max-width: @screen-lg) {
+  .logPage :global(.ant-form-item) {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .logPage :global(.ant-form-item) {
+    margin-right: 8px;
+  }
+}

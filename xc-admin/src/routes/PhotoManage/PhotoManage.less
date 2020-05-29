@@ -1,0 +1,119 @@
+@import "~antd/lib/style/themes/default.less";
+.table{
+  overflow: hidden;
+  position: relative;
+}
+.tabRow{
+  overflow: hidden;
+  .titImg{
+    float:left;
+    width:124px;
+    height: 124px;
+    border:1px solid #e8e8e8;
+    img{
+      display: block;
+      width:100%;
+      height:auto;
+    }
+  }
+  .text{
+    margin-left:140px;
+    h4{
+      span{
+        display: inline;
+        margin-right:15px;
+      }
+    }
+  }
+}
+.searchLayout{
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  dd{
+    float:left;
+    width: 180px;
+    padding-right:20px;
+    vertical-align: middle;
+    margin:0;
+    min-height: 64px;
+    .submitButtons{
+      vertical-align: -9px;
+    }
+  }
+  dd:after{
+    content: '';
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+  }  
+}
+.modalDom{
+  dd{
+    float:none;
+    width:100%;
+  }
+}
+.deleteSelect{
+  position:absolute;
+  left:0px;
+  bottom:16px;
+}
+.searchLayout:after{
+  content: '';
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+}
+.area{
+  overflow: hidden;
+  background:#fff;
+  padding:0 15px 20px;
+}
+.areaTitle{
+  border-bottom:1px solid rgba(233, 233, 233, 1);
+  padding-bottom:15px;
+  font-size:16px;
+}
+.selectTime{
+  padding:20px 0 10px;
+  overflow: hidden;
+  text-align: right;
+}
+.selectTime a{
+  display: inline-block;
+  padding:5px 10px;
+  color:rgba(0, 0, 0, 0.647);
+  border-radius: 5px;
+  margin-left:5px;
+}
+.selectTime a.sel{
+  background: #1890ff;
+  color:#fff
+}
+.realWarp{
+  overflow: hidden;
+}
+.realTitle{
+  font-size:26px;
+  color:#333;
+}
+.realCan{
+  padding:20px;
+  margin-top:24px;
+  background: #fff;
+  overflow: hidden; 
+}
+@media screen and (max-width: @screen-lg) {
+  .table :global(.ant-form-item) {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .table :global(.ant-form-item) {
+    margin-right: 8px;
+  }
+}

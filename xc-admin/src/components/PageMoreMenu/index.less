@@ -1,0 +1,61 @@
+.moreMenu{
+  overflow: hidden;
+  min-height: 116px;
+  dl dt{
+    font-size:24px;
+    font-weight:bold;
+    padding-bottom:20px;
+    color:#333;
+  }
+  dl dd{
+    width: 20%;
+    float:left;
+    position: relative;
+    box-sizing: border-box;
+    padding:0 20px 20px 0;
+    margin:0;
+    .menu{
+      border:1px solid rgba(233, 233, 233, 1);
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.149019607843137);
+      padding:20px;
+      padding-bottom:0;
+      min-height: 104px;
+      .imgTitle{
+          margin-bottom:10px;
+          overflow: hidden;
+          display: flex;
+          img{
+            width:30px;
+            height:30px;
+            display:block;
+            float:left;
+          }
+          h3{
+            flex:1;
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            padding-left:10px;
+            margin:0;
+          }
+      }
+      .url{
+        p{
+          padding-left:0;
+          margin-bottom: 0;
+          word-break: break-word;
+        }
+      }
+    }
+    .edit{
+      position: absolute;
+      padding:5px;
+      right:40px;
+      top:15px;
+    }
+  }
+  dl dd:nth-of-type(5n){
+    padding-right:0px;
+  }
+  
+}

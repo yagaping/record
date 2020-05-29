@@ -1,0 +1,61 @@
+@import "~antd/lib/style/themes/default.less";
+
+.phoneSimulator {
+  @with: 750px / 2;
+  @height:837px;
+  @statusColor: #333;
+  @statusUrlColor: #a2a2a2;
+
+  @statusImgHeight: 31px;
+  @urlContainerHeight: 40px;
+  
+  // 样式
+  width: @with;
+  height: @height;
+  background-color: #FFF;
+  box-shadow: 0px 1px 5px 2px #a2a2a2;
+  background-color: #f1f1f1;
+
+  // 状态栏颜色
+  .headerStatusTab {
+    background-color: @statusColor;
+  }
+
+  // 状态栏图片
+  .statusImg {
+    display: block;
+    width: 96%;
+    margin: 0px auto;
+    padding: 10px 0;
+    height: @statusImgHeight;
+  }
+
+  // url 容器
+  .urlContainer {
+    background-color: @statusColor;
+    height: @urlContainerHeight;
+    width: 100%;
+    overflow: hidden;
+
+    .urlText {
+      background-color: @statusUrlColor;
+      height: 30px;
+      width: 96%;
+      margin: 0 auto;
+      border-radius: 5px;
+      line-height: 30px;
+      padding: 0 8px;
+      color: #f1f1f1;
+      font-weight: bold;
+    }
+  }
+
+  // iframe
+  .iframe {
+    border: none;
+    width: 100%;
+    height: @height - @urlContainerHeight - @statusImgHeight;
+  }
+}
+
+

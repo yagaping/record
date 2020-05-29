@@ -1,0 +1,37 @@
+{
+  "entry": "src/index.js",
+  "extraBabelPlugins": [
+  "transform-runtime",
+  "transform-decorators-legacy",
+  "transform-class-properties",
+  ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]
+],
+"env": {
+  "development": {
+    "extraBabelPlugins": [
+      "dva-hmr"
+    ]
+  },
+  "production": {
+    "extraBabelPlugins": [
+      "transform-runtime",
+      "transform-decorators-legacy",
+      ["import", { "libraryName": "antd", "style": true }]
+    ]
+  }
+},
+"proxy": {
+  "/work-api": {
+    "target": "http://47.111.128.153", 
+    "pathRewrite": { "/work-api" : "" }
+  }
+},
+  "externals": {
+  "g2": "G2",
+    "g-cloud": "Cloud",
+    "g2-plugin-slider": "G2.Plugin.slider"
+},
+  "ignoreMomentLocale": true,
+  "theme": "./src/theme.js",
+  "hash": true
+}

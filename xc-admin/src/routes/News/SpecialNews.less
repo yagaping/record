@@ -1,0 +1,62 @@
+@import "~antd/lib/style/themes/default.less";
+.searchLayout{
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  dd{
+    float:left;
+    width: 180px;
+    padding-right:20px;
+    vertical-align: middle;
+    margin:0;
+    min-height: 64px;
+    .submitButtons{
+      vertical-align: -9px;
+    }
+  }
+  dd:after{
+    content: '';
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+  }
+ 
+  
+}
+.newsTitle{
+  span{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  span:first-child{
+    max-width:400px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }  
+}
+.bgImg{
+  width: 200px;
+  height: 100px;
+  background-size:cover;
+  background-repeat:no-repeat;  
+}
+.searchLayout:after{
+  content: '';
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+}
+@media screen and (max-width: @screen-lg) {
+  .special :global(.ant-form-item) {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .special :global(.ant-form-item) {
+    margin-right: 8px;
+  }
+}

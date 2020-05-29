@@ -1,0 +1,185 @@
+import React, { PureComponent } from 'react';
+import { Table } from 'antd';
+import styles from './index.less';
+
+const STATUS_MAP = {
+  REMOVE: {
+    text: '删除',
+    value: 'default',
+    status: 'REMOVE',
+  },
+};
+
+class NewsQuestionAnswerVideoTable extends PureComponent {
+  state = {
+    selectedRowKeys: [],
+    totalCallNo: 0,
+  };
+
+  componentWillReceiveProps(nextProps) {
+    // clean state
+    if (nextProps.selectedRows.length === 0) {
+      this.setState({
+        selectedRowKeys: [],
+        totalCallNo: 0,
+      });
+    }
+  }
+
+  handleRowSelectChange = (selectedRowKeys, selectedRows) => {
+    const { data: { pagination } } = this.props;
+
+    const totalCallNo = pagination.total - selectedRows.length;
+    if (this.props.onSelectRow) {
+      this.props.onSelectRow(selectedRows);
+    }
+
+    this.setState({ selectedRowKeys, totalCallNo });
+  }
+  render() {
+    const { selectedRowKeys, totalCallNo } = this.state;
+    const { data: { list, pagination }, loading, onTableChange } = this.props;
+
+    const columns = [
+      {
+        title: '封面图片',
+        width: '10%',
+        render: (key, row) => {
+          return (
+            <div>
+              <div>
+                <img src={row.videoImage} width={100} height={100} />
+              </div>
+            </div>
+          );
+        },
+      },
+      {
+        title: '视频地址',
+        width: '10%',
+        render: (key, row) => {
+          if (row.videoUrl === undefined) {
+            return (
+              <div>
+                <div><a href={row.videoUrl} target="_blank">{row.videoUrl}</a></div>
+              </div>
+            );
+          }
+          let temp = row.videoUrl.length<20?row.videoUrl:row.videoUrl.substring(0, 20) + '...';
+          return (
+            <div>
+              <div><a href={row.videoUrl} target="_blank">{temp}</a></div>
+            </div>
+          );
+        },
+      },
+      {
+        title: '文件地址',
+        width: '10%',
+        render: (key, row) => {
+          if (row.videoUrl === undefined) {
+            return (
+              <div>
+                <div><a href={row.fileUrl} target="_blank">{row.fileUrl}</a></div>
+              </div>
+            );
+          }
+          let temp = row.fileUrl.length<20?row.fileUrl:row.fileUrl.substring(0, 20) + '...';
+          return (
+            <div>
+              <div><a href={row.fileUrl} target="_blank">{temp}</a></div>
+            </div>
+          );
+        },
+      },
+      {
+        title: '持续时间',
+        width: '10%',
+        render: (key, row) => {
+          return (
+            <div>
+              <div>{row.durationTime}</div>
+            </div>
+          );
+        },
+      },
+      {
+        title: '图片大小',
+        width: '10%',
+        render: (key, row) => {
+          return (
+            <div>
+              <div>{row.videoImageWidth}*{row.videoImageHeight}</div>
+            </div>
+          );
+        },
+      },
+      {
+        title: '视频格式',
+        width: '10%',
+        render: (key, row) => {
+          let temp = null;
+          if (row.videoFormat === 0) {
+            temp = 'MP4';
+          }
+          return (
+            <div>
+              <div>{temp}</div>
+            </div>
+          );
+        },
+      },
+      {
+        title: '介绍',
+        width: '30%',
+        render: (key, row) => {
+          return (
+            <div>
+              <div>
+                <small>{row.videoIntroduce}</small>
+              </div>
+            </div>
+          );
+        },
+      },
+      {
+        title: '操作',
+        width: '10%',
+        render: (row) => {
+          return this.props.operation(row);
+        },
+      },
+    ];
+
+    const paginationProps = {
+      showSizeChanger: true,
+      showQuickJumper: true,
+      ...pagination,
+    };
+
+    const rowSelection = {
+      selectedRowKeys,
+      onChange: this.handleRowSelectChange,
+      getCheckboxProps: record => ({
+        disabled: record.disabled,
+      }),
+    };
+
+    return (
+      <div className={styles.standardTable}>
+        <Table
+          loading={loading}
+          rowKey={newsQuestionAnswerVideo => newsQuestionAnswerVideo.newsQuestionAnswerVideoId}
+          rowSelection={rowSelection}
+          dataSource={list}
+          columns={columns}
+          pagination={paginationProps}
+          onChange={onTableChange}
+        />
+      </div>
+    );
+  }
+}
+
+NewsQuestionAnswerVideoTable.STATUS_MAP = STATUS_MAP;
+export default NewsQuestionAnswerVideoTable;

@@ -1,0 +1,110 @@
+@import "~antd/lib/style/themes/default.less";
+.concern{
+  overflow: hidden;
+  position: relative;
+  .search{
+    overflow: hidden;
+  }
+  .addAndDelet{
+    position: absolute;
+    left:0;
+    bottom: 14px;
+  }
+}
+.tableListForm {
+  :global {
+    .ant-form-item {
+      margin-bottom: 24px;
+      margin-right: 0;
+      display: flex;
+      > .ant-form-item-label {
+        width: auto;
+        line-height: 40px;
+        padding-right: 8px;
+      }
+    }
+    .ant-form-item-control-wrapper {
+      flex: 1;
+    }
+  }
+  .submitButtons {
+    white-space: nowrap;
+    button{
+      margin-top:4px;
+    }
+  }
+}
+.searchLayout{
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  dd{
+    float:left;
+    width: 180px;
+    padding-right:20px;
+    vertical-align: middle;
+    margin:0;
+    min-height: 64px;
+  }
+  dd:after{
+    content: '';
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+  }
+  .ago{
+    overflow: hidden;
+    width:auto;
+    padding-left: 20px;
+    a{
+      display: block;
+      float: left;
+      height: 36px;
+      line-height: 36px;
+      margin-top:4px;
+      padding: 0 5px;
+      margin-left:5px;
+    }
+    a:link{
+      text-decoration:none;
+    }
+  }
+  .refresh{
+    position:absolute;
+    right:0;
+    top:0;
+    padding-right:0;
+    width:auto;
+    a{
+      display: inline-block;
+      padding:5px;
+      margin-top:5px;
+      text-decoration: none;
+    }
+  }
+}
+.bgImg{
+  width: 200px;
+  height: 100px;
+  background-size:cover;
+  background-repeat:no-repeat;  
+}
+.searchLayout:after{
+  content: '';
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+}
+@media screen and (max-width: @screen-lg) {
+  .tableListForm :global(.ant-form-item) {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .tableListForm :global(.ant-form-item) {
+    margin-right: 8px;
+  }
+}

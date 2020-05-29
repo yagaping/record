@@ -1,0 +1,98 @@
+.engine{
+  overflow: hidden;
+  .robot{
+    .robotInfo{
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      img{
+        display: block;
+        width:56px;
+        height: 56px;
+        margin-top:20px;
+      }
+      .sum{
+        overflow:hidden;
+        padding:26px 0 0 20px;
+        h3{
+          padding:0;
+          margin:0;
+          font-size:14px;
+          line-height: 22px;
+          color: rgba(0, 0, 0, 0.427450980392157);
+        }
+        p{
+          font-size: 30px;
+          line-height: 40px;
+          color: rgba(0, 204, 0, 0.847058823529412);
+          padding:0;
+          margin:0;
+        }
+      }
+    }
+   
+  }
+  .box{
+    height: 112px;
+    overflow: hidden;
+    margin: 0 20px 20px 0;
+    border:1px solid rgba(233, 233, 233, 1);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    position: relative;
+    .count{
+      padding:26px 20px 0 0;
+      h3{
+        padding:0;
+        margin:0;
+        font-size:14px;
+        line-height: 22px;
+        color: rgba(0, 0, 0, 0.427450980392157);
+      }
+      p{
+        font-size: 30px;
+        line-height: 40px;
+        color: rgba(0, 0, 0, 0.847058823529412);
+      }
+    }
+    .set{
+      position: absolute;
+      right:0;
+      bottom:0;
+      padding:5px 10px;
+    }
+  }
+}
+.chart{
+  overflow: hidden;
+  padding-top:20px;
+  .chartTitle{
+    border-bottom:1px solid rgba(233, 233, 233, 1);
+    height:32px;
+    padding: 11px 0;
+    overflow: hidden;
+    line-height: 32px;
+    box-sizing: content-box;
+    margin-bottom: 30px;
+    .name{
+      height: 32px;
+      float: left;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.847058823529412);
+    }
+    .selDate{
+      float: right;
+      min-width: 500px;
+      text-align: right;
+      a{
+        text-decoration: none;
+        display: inline-block;
+        margin-right:12px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.647058823529412);
+      }
+      .sel{color: rgba(51, 102, 255, 0.647058823529412);}
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.boxItem{
+  margin-bottom: 24px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  .imgList{
+        position: relative;
+        height: 122px;
+    .box{
+        width:104px;
+        height: 104px;
+        float:left;
+        position: absolute;
+        margin-bottom: 20px;
+        top:0;
+        left:0;
+      .tips{
+        position: absolute;
+        bottom: 0;
+        left:0;
+        margin-bottom: -24px;
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+      }
+      .show{
+        visibility: visible;
+        color:red;
+        font-size:12px;
+        height: 20px;
+        line-height: 20px;
+        position: absolute;
+        bottom: -44px;
+        left:0;
+      }
+      .hide{
+        height: 20px;
+        visibility: hidden;
+        position: absolute;
+        bottom: -44px;
+        left:0;
+        opacity: 0;
+      }
+    }
+  }
+  .imgList:after{
+   content:'.';
+   height:0;
+   overflow: hidden;
+   display: block;
+   clear: both; 
+  }
+}
