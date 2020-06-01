@@ -1,0 +1,178 @@
+@import '~antd/lib/style/themes/default.less';
+@import '../../utils/utils.less';
+
+.tableList {
+  .tableListOperator {
+    margin-bottom: 16px;
+    button {
+      margin-right: 8px;
+    }
+  }
+}
+
+.tableListForm {
+  :global {
+    .ant-form-item {
+      margin-bottom: 24px;
+      margin-right: 0;
+      display: flex;
+      > .ant-form-item-label {
+        width: auto;
+        line-height: 32px;
+        padding-right: 8px;
+      }
+      .ant-form-item-control {
+        line-height: 32px;
+      }
+    }
+    .ant-form-item-control-wrapper {
+      flex: 1;
+    }
+  }
+  .submitButtons {
+    white-space: nowrap;
+    margin-bottom: 24px;
+  }
+}
+
+.stateRed{
+  color: #bfbfbf;
+}
+
+.stateBlue{
+  color: #1890ff;
+}
+
+.stateOrange {
+  color: #FF8000;
+}
+
+.btnColor{
+  background-color: #ff8000;
+  border-color: #ff8000;
+  &:link{
+    background-color: #f9a148;
+    border-color: #f9a148;
+  };
+  &:visited{
+    background-color: #f9a148;
+    border-color: #f9a148;
+  };
+  &:hover{
+    background-color: #f9a148;
+    border-color: #f9a148;
+  };
+  &:active{
+    background-color: #f9a148;
+    border-color: #f9a148;
+  };
+  &::selection{
+    background: #f9a148;
+    border-color: #f9a148;
+  };
+  // &:active{
+  //   background-color: #ff8000;
+  //   border-color: #ff8000;
+  // };
+}  
+
+.editable-row-operations a {
+  margin-right: 8px;
+  display: inline-block;
+}
+
+@media screen and (max-width: @screen-lg) {
+  .tableListForm :global(.ant-form-item) {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .tableListForm :global(.ant-form-item) {
+    margin-right: 8px;
+  }
+}
+
+.myTable {
+  :global {
+    .ant-table-footer {
+      padding: 0 !important;
+      overflow-x: hidden !important;
+    }
+  }
+}
+
+.imgColor {
+  color: #1890ff
+}
+
+.videoColor {
+  color: #3bfc7b
+}
+
+.audioColor {
+  color: #ff1818
+}
+
+li {
+  list-style: none;
+}
+//信息分类树
+.treeMenu {
+  position: fixed;
+  z-Index: 100000;
+  border: 1px solid #ccc;
+  background: #fff;
+  width: 250px;
+  padding: 5px;
+  box-shadow: 2px 2px 2px #888;
+}
+.treeMenu li:hover {
+  background: #f5f5f5;
+  color:rgba(0, 0, 0, 0.85);
+}
+
+.verifyModal {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+.number{
+  color:rgba(0, 0, 0, 0.85);
+}
+.number span{
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.audioBtn{
+  width:26px;
+  height: 26px;
+  font-size:26px;
+  cursor: pointer;
+}
+.videoCan{
+  width:120px;
+  height: 80px;
+  position: relative;
+  cursor: pointer;
+}
+.videoBtn{
+  font-size:30px;
+  position: absolute;
+  left:45px;
+  top:25px;
+  color:#fff;
+  opacity: .7;
+}
+.describe{
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.historyPhone{
+  display: inline-block;
+  margin-right:10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}

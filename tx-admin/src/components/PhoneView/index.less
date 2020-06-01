@@ -1,0 +1,68 @@
+.wraper {
+    height: 667px;
+    overflow: auto;
+}
+.title {
+    font-size: 20px;
+    line-height: 30px;
+    color: #333;
+    font-weight:bold;
+    text-align: center;
+    margin-top: 32px;
+}
+.year {
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    line-height: 12px;
+    margin-top: 15px;
+}
+.phoneWraper {
+    p {
+        font-size: 16px;
+        color: #333;
+        line-height: 25px;
+        font-weight: 300;
+        text-align: justify;
+    }
+    p:first-child {
+        margin-top: 15px;
+    }
+    p:last-child {
+        margin-bottom: 80px;
+    }
+    p img{
+        width: 100% !important;
+        height: auto !important;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 10px;
+    }
+    p strong{
+        color:#999; 
+        font-size: 14px; 
+        font-weight: normal;
+        margin-bottom: 14px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.wraper::-webkit-scrollbar {
+    width: 4px; /*对垂直流动条有效*/
+    height: 4px; /*对水平流动条有效*/
+    display: none;
+}
+
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+.wraper::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+/*定义滑块颜色、内阴影及圆角*/
+.wraper::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
