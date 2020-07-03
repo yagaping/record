@@ -1,4 +1,4 @@
-学习、笔记
+﻿学习、笔记
 
 如何在github添加仓库
 https://www.cnblogs.com/cxk1995/p/5800196.html
@@ -108,3 +108,4 @@ $ git stash pop #恢复并删除stash
 配置git快捷命令
 $ git config --global alias.ab abc #ab简写，abc命令，不加--global只对当前仓库生效
 
+2020-7-3
