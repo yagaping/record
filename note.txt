@@ -52,6 +52,12 @@ $ git reflog
 $ git reset --hard HEAD~1 (1表示上一个版本，100表示上第100个版本)
 $ git reset --hard 2047087ddc221c541882f5be574d1c09d4c1e1bd (204...,commit_ID)
 
+撤销文件修改，未提交缓存区
+$ git checkout -- 文件名
+
+撤销提交到缓存区的文件
+$ git reset HEAD 文件名
+
 合并分支
 $ git merge '分支名'
 $ git merge --abort #撤销当前合并
