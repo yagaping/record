@@ -114,4 +114,4 @@ $ git stash pop #恢复并删除stash
 配置git快捷命令
 $ git config --global alias.ab abc #ab简写，abc命令，不加--global只对当前仓库生效
 
-修改：2020-07-03
+修改：2020-07-06
