@@ -1,0 +1,125 @@
+﻿学习、笔记
+
+如何在github添加仓库
+https://www.cnblogs.com/cxk1995/p/5800196.html
+
+创库地址
+github:https://github.com/yagaping/someProject.git
+码云：https://gitee.com/yagagping/someProject.git
+
+在现有目录中初始化仓库
+$ git init
+
+操作远程库
+$ git clone https://github.com/libgit2/libgit2 mylibgit #克隆远程库，并取名
+$ git remote add origin https://github.com/yagaping/someProject.github #关联远程仓库
+$ git remote -v #查看关联的远程库
+$ git remote rm origin #删除远程库
+
+将远程项目拉下来
+$ git pull origin master
+
+提交
+$ git push -u origin master(第一次推送加-u,关联远程分支master)
+$ git push origin master
+
+拉取最新数据
+$ git fetch origin
+
+创建一个名为 .gitignore 的文件，列出要忽略的文件模式
+
+操作文件
+$ touh 文件名 #新增文件
+$ vim 文件名	#进入文件
+	1、在编辑模式下按下ESC键，回退到命令模式；在命令模式下按i/insert，进入编辑模式
+	2、在命令模式下键入"ZZ"或者":wq"保存修改并且退出vim
+	3、如果只想保存文件，则键入":w"，回车后，底行会提示写入操作结果，并保持停留在命令模式
+	4、放弃所有文件修改：按下ESC键进入命令模式，键入":q!"回车后放弃修改并退出vim
+	5、放弃所有文件修改，但不退出 vi，即回退到文件打开后最后一次保存操作的状态，继续进行文件操作：按下ESC键进入命令模式，键入":e!"，回车后回到命令模式
+
+查看文件
+$ cat 文件名
+
+查看文件修改对比
+$ git diff 文件名
+
+查看日志
+$ git log #键入q退出
+$ git log --pretty=oneline #键入q退出
+$ git reflog
+
+回滚到某个版本
+$ git reset --hard HEAD~1 (1表示上一个版本，100表示上第100个版本)
+$ git reset --hard 2047087ddc221c541882f5be574d1c09d4c1e1bd (204...,commit_ID)
+
+撤销文件修改，未提交缓存区
+$ git checkout -- 文件名
+
+撤销提交到缓存区的文件
+$ git reset HEAD 文件名
+
+合并分支
+$ git merge '分支名'
+$ git merge --abort #撤销当前合并
+$ git reset --hard HEAD #撤销工作目录中所有未提交文件的修改内容
+
+操作分支
+$ git branch 分支名	#创建新分支
+$ git checkout 分支名 #进入分支
+
+查看主线分支
+$ git branch -a
+
+操作标签
+$ git tag v1.0 #创建标签
+$ git tag #查看标签
+$ git tag v1.1 commitId #针对某个历史打标签
+$ git tag -a v0.1 -m '备注' commitId #创建带备注的标签
+$ git tag -d v1.0 #删除标签
+$ git push origin v1.0 #推送本地标签到远程
+$ git push origin --tags #推送所有标签到远程
+$ git push origin :refs/tags/v1.1 #删除远程标签
+
+查看哪些分支已经合并到当前分支
+$ git branch --merged
+
+查看所有包含未合并工作的分支
+$ git branch --no-merged
+
+查看文件
+$ dir
+$ ls
+
+显示当前目录
+$ pwd
+
+删除远程仓库文件
+$ git rm -r --cached 文件名
+$ git commit -m '删除备注'
+$ git push -u origin master #提交删除
+
+删除本地文件
+$ git rm -f 文件名
+
+删除本地分支
+$ git branch -d 分支名
+
+强制删除本地分支
+$ git branch -D 分支名
+
+删除远程分支
+$ git push origin --delete 分支名 
+
+把当前改的存储起来
+$ git stash
+$ git stash list #查看保存的记录
+$ git stash apply #恢复内容，不删除stash
+$ git stash drop #删除保存记录stash
+$ git stash pop #恢复并删除stash
+
+配置git快捷命令
+$ git config --global alias.ab abc #ab简写，abc命令，不加--global只对当前仓库生效
+
+
+修改：2020-11-25 16:37
+
